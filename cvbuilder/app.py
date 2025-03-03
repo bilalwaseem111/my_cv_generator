@@ -1,14 +1,14 @@
-import streamlit as st
+import streamlit as st # type: ignore
 import os
 
 # Function to load CSS
 def load_css():
-    css_file = "style.css"  # Ensure this file exists in the same directory
+    css_file = os.path.join(os.path.dirname(__file__), "style.css")  # Absolute Path
     if os.path.exists(css_file):
-        with open(css_file, "r") as f:
+        with open(css_file, "r", encoding="utf-8") as f:
             st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
     else:
-        st.warning("⚠️ Style file (style.css) not found. Default styling applied.")
+        st.error("Fill it.")
 
 # Load CSS at startup
 load_css()
