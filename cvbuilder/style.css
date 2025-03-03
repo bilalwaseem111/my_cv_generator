@@ -1,0 +1,20 @@
+/* Custom Streamlit CSS */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0a3a3;
+}
+.stTextInput, .stTextArea {
+    border-radius: 10px;
+    border: 2px solid #32383e;
+    padding: 10px;
+}
+.stDownloadButton {
+    background-color: #fcfba2;
+    color: white;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+.stDownloadButton:hover {
+    background-color: #98e876;
+}
